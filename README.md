@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# New Test TS App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Обзор.
+Приложение для новостей — это веб-приложение на базе React, предназначенное для получения и отображения новостных статей из различных категорий. Оно использует Redux для управления состоянием, Axios для выполнения API-запросов и React Router для навигации. Приложение написано на TypeScript для обеспечения типовой безопасности и включает утилиты для тестирования, что делает его устойчивым к ошибкам.
 
-## Available Scripts
+## Функции.
+  1. Получает новостные статьи на основе текущего года и месяца.
+  2. Отображает новостные статьи, сгруппированные по датам.
+  3. Поддерживает несколько категорий: НАУКА, ОБЩИЕ, РАЗВЛЕЧЕНИЯ, ТЕХНОЛОГИИ, БИЗНЕС, ЗДОРОВЬЕ, СПОРТ.
+  4. Автоматически обновляет новости каждые 30 секунд.
+  5. Включает адаптивное меню для навигации по категориям.
+  6. Использует SASS для стилизации.
 
-In the project directory, you can run:
+## Установка и загрузка.
+  Чтобы начать работу с приложением для новостей, выполните следующие шаги:
+  
+  1. Клонируйте репозиторий:
+    
+      ### git clone https://github.com/bellatrisa1/news-test-app-NYT.git
 
-### `npm start`
+  2. Установите зависимости:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+      ### npm install
+     
+  4. Запустите сервер разработки:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+       ### npm start
 
-### `npm test`
+Это запустит приложение в режиме разработки. Откройте http://localhost:3000, чтобы увидеть его в браузере.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Структура проекта.
+  - src/: Содержит исходный код приложения.
+  - App.tsx: Основной компонент приложения.
+  - store.tsx: Конфигурация хранилища Redux и слайс новостей.
+  - App.scss: Стили для приложения.
+  - public/: Статические файлы и HTML-шаблон.
+  - package.json: Метаданные проекта и зависимости.
 
-### `npm run build`
+## Зависимости.
+  - React: Библиотека JavaScript для создания пользовательских интерфейсов.
+  - Redux: Предсказуемый контейнер состояния для JavaScript-приложений.
+  - React Router: Декларативный маршрутизатор для React.
+  - Axios: HTTP-клиент на основе промисов для браузера и Node.js.
+  - TypeScript: Типизированный язык программирования, который компилируется в JavaScript.
+  - SASS: Препроцессор, который интерпретируется или компилируется в CSS.
+  - Библиотеки для тестирования: @testing-library/react, @testing-library/jest-dom, @testing-library/user-event для тестирования компонентов React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Скрипты.
+ - start: Запускает сервер разработки.
+ - build: Собирает приложение для продакшена.
+ - test: Запускает тесты.
+ - eject: Выгружает конфигурацию create-react-app.
