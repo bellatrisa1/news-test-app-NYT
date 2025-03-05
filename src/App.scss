@@ -1,0 +1,149 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.news-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  position: relative;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  background: white;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+
+  &.open {
+    left: 0;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    padding: 20px 0;
+
+    li {
+      font-size: 18px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  color: black;
+  border-bottom: 1px solid #ddd;
+
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+main {
+  padding: 10px;
+
+  h2 {
+    font-size: 18px;
+    color: #444;
+    margin-top: 15px;
+  }
+
+  .news-item {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+
+      .news-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .source {
+          font-weight: bold;
+          color: #007bff;
+        }
+
+        p {
+          font-size: 14px;
+          color: #222;
+        }
+
+        .date {
+          font-size: 12px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.loading-icon {
+  width: 30px;
+  height: 30px;
+  border: 4px solid blue;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
